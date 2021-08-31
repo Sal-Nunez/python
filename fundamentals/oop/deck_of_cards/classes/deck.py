@@ -22,7 +22,11 @@ class Deck:
                     str_val = str(i)
                 self.cards.append( card.Card( s , i , str_val ) )
 
-    def show_cards(self):
-        for card in self.cards:
-            card.card_info()
+#     def show_cards(self):
+#         for card in self.cards:
+#             card.card_info()
 
+# list_of_cards = []
+# for dict in deck:
+#     card = Deck(dict['face_value'], dict['actual_value'], dict['suit'])
+#     list_of_cards.append(card)
