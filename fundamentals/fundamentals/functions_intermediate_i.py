@@ -22,19 +22,19 @@
 # z[0]["y"] = 30
 # print(z)
 
-# 2
+2
 # should output: (it's okay if each key-value pair ends up on 2 separate lines;
 # bonus to get them to appear exactly as below!)
 # first_name - Michael, last_name - Jordan
 # first_name - John, last_name - Rosales
 # first_name - Mark, last_name - Guillen
 # first_name - KB, last_name - Tonel
-# students = [
-#         {'first_name':  'Michael', 'last_name' : 'Jordan'},
-#         {'first_name' : 'John', 'last_name' : 'Rosales'},
-#         {'first_name' : 'Mark', 'last_name' : 'Guillen'},
-#         {'first_name' : 'KB', 'last_name' : 'Tonel'}
-#     ]
+students = [
+        {'first_name':  'Michael', 'last_name' : 'Jordan'},
+        {'first_name' : 'John', 'last_name' : 'Rosales'},
+        {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+        {'first_name' : 'KB', 'last_name' : 'Tonel'}
+    ]
 
 # def iterateDictionary(list):
 #     newString = ""
@@ -42,11 +42,11 @@
 #         newString += (f"First Name - {x['first_name']}, Last Name - {x['last_name']}\n")
 #     return newString
 
-# # iterateDictionary(students)
+# #iterateDictionary(students)
 # value5 = iterateDictionary(students)
 # print(value5)
 
-#3 Get Values from a list of Dictionaries
+#$3 Get Values from a list of Dictionaries
 # def iterateDictionary2(keyName, list):
 #     for x in list:
 #         print(x[f"{keyName}"])
@@ -54,21 +54,21 @@
 # iterateDictionary2('first_name', students)
 # iterateDictionary2('last_name', students)
 
-#4 Iterate Through a Dictionary with list Values
+# 4 Iterate Through a Dictionary with list Values
 
-# dojo = {
-#     'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
-#     'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
-# }
+dojo = {
+    'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
+    'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
+}
 
-# def printInfo(list):
-#     for x in list:
-#         print(f"{len(list[x])} {x}")
-#         for y in list[x]:
-#             print(y)
-#         print()
+def printInfo(list):
+    for x in list:
+        print(f"{len(list[x])} {x.upper()}")
+        for y in list[x]:
+            print(y)
+        print()
 
-# printInfo(dojo)
+printInfo(dojo)
 # output:
 # 7 LOCATIONS
 # San Jose

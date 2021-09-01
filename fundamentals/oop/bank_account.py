@@ -18,8 +18,8 @@ class BankAccount:
             return self
     # your code here
     def display_account_info(self):
-        print (f"Interest Rate: {self.int_rate}")
         print (f"Balance: {self.balance}")
+        print (f"Interest Rate: {self.int_rate}")
         return self
     # your code here
     def yield_interest(self):
@@ -30,10 +30,10 @@ class BankAccount:
     @classmethod
     def display_all_users(cls):
         for x in cls.all_accounts:
-            print(f"Balance of Account: {x.balance}\n Interest Rate of Account: {x.int_rate}")
+            x.display_account_info()
 
-# jon1 = BankAccount(1.25, 150000)
-# brian1 = BankAccount(1.3, 1500000)
-# BankAccount.display_all_users()
+jon1 = BankAccount(1.25, 150000)
+brian1 = BankAccount(1.3, 1500000)
+BankAccount.display_all_users()
 # jon1.deposit(5000).deposit(100000).deposit(250).withdraw(80000).yield_interest().display_account_info()
 # brian1.deposit(10000).deposit(22000).withdraw(1000).withdraw(60000).withdraw(50000).withdraw(50).yield_interest().display_account_info()

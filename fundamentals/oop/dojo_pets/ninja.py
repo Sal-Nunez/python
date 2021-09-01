@@ -7,18 +7,17 @@ class Ninja():
         self.pet_food = pet_food
         self.pet = pet
     def walk(self):
-        Pets.play(self)
+        self.pet.play()
         return self
     def feed(self):
-        Pets.eat(self)
+        print(self)
+        self.pet.eat()
         return self
     def bathe(self):
-        Pets.noise(self)
+        self.pet.noise()
         return self
-alexa = Ninja("Alexa", "Amazon", "Beef Jerky", "Purina", "Dog")
-alexa.pet = Pets('Sparky', 'Labrador', 'Plays Dead')
-john = Ninja('John', 'Appleseed', 'Snake Treat', 'Rats', 'Snake')
-john.pet = Pets('Danger Noodle', 'King Cobra', 'Bites')
+alexa = Ninja("Alexa", "Amazon", "Beef Jerky", "Purina", Pets('Sparky', 'Labrador', 'Plays Dead'))
+john = Ninja('John', 'Appleseed', 'Snake Treat', 'Rats', Pets('Danger Noodle', 'King Cobra', 'Bites'))
 alexa.feed()
 alexa.walk()
 alexa.bathe()
