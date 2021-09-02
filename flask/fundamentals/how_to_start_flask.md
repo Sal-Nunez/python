@@ -26,16 +26,15 @@
         -css
 5. Server.py File
     ```
-    from flask import Flask
-    from flask import render_template
+    from flask import Flask, render_template, request, redirect
     app = Flask(__name__)
     
     @app.route('/')
     def hello_world():
-        return
+        return render_template('index.html')
     
     if __name__=="__main__":
-    app.run(debug=True)
+        app.run(debug=True)
 # Notes
     -Routes
         -Display Route -> Render View
