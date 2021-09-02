@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>Checkerboard</title>
+</head>
+
+<body>
+    {% if x % 2 == 0 %}
+    <table>
+        {% for x in range(x) %}
+        <tr class="2by2">
+            {% for j in range(y) %}
+            <td class="oneSquare" style= background-color:{{ color1 }};></td>
+            <td class="oneSquare" style= background-color:{{ color2 }};></td>
+            {% endfor %}
+        </tr>
+        <tr class="2by2">
+            {% for j in range(y) %}
+            <td class="oneSquare" style= background-color:{{ color2 }};></td>
+            <td class="oneSquare" style= background-color:{{ color1 }};></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    {% if x % 2 == 1 %}
+    <table>
+        {% for x in range(x) %}
+        <tr class="3by3">
+            {% for i in range(y) %}
+            {% if (x+i) % 2 == 1 %}
+            <td class="oneSquare" style= background-color:{{ color2 }}></td>
+            {% endif %}
+            {% if (x+i) % 2 == 0 %}
+            <td class="oneSquare" style= background-color:{{ color1 }}></td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+
+</html>

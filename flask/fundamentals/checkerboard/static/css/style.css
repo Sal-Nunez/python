@@ -1,0 +1,14 @@
+* {
+    margin: 0px, 0px;
+    padding: 0px, 0px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    background-color: slategray;
+}
+.oneSquare {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+}
