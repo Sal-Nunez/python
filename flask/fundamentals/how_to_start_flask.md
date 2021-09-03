@@ -26,11 +26,12 @@
         -css
 5. Server.py File
     ```
-    from flask import Flask, render_template, request, redirect
+    from flask import Flask, render_template, request, redirect, session
     app = Flask(__name__)
+    app.secret_key = 'wubalubadubdub'
     
     @app.route('/')
-    def hello_world():
+    def index():
         return render_template('index.html')
     
     if __name__=="__main__":
@@ -42,3 +43,10 @@
             - should never display views!!
 
     -Views -> (mVc) - the V inside (MVC) is views
+        -templates
+
+    -templating engine
+
+    - Static Files??
+    -things that are not going to be modified...often
+    -css
