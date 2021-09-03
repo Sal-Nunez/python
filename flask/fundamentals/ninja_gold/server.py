@@ -23,10 +23,6 @@ def reset():
     session.clear()
     return redirect('/')
 
-@app.route(/game_over)
-def game_over:
-    pass
-
 def farm():
     gold_amount = random.randint(10, 20)
     if 'activity' not in session:
@@ -80,8 +76,6 @@ def add():
         session['counter'] = 1
     else:
         session['counter'] += 1
-    if session['counter'] > 14:
-        end_game()
     return gold_amount
 
 
