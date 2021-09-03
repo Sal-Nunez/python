@@ -22,6 +22,7 @@
     -pipfile.lock
     -templates
         -index.html
+    -static
         -js
         -css
 5. Server.py File
@@ -37,16 +38,27 @@
     if __name__=="__main__":
         app.run(debug=True)
 # Notes
-    -Routes
-        -Display Route -> Render View
-        -Action Route -> Perform Action(s)
+    - Routes
+        - Display Route -> Render View
+        - Action Route -> Perform Action(s)
             - should never display views!!
 
-    -Views -> (mVc) - the V inside (MVC) is views
-        -templates
+    - Views -> (mVc) - the V inside (MVC) is views
+        - templates
 
-    -templating engine
+    - templating engine
 
     - Static Files??
-    -things that are not going to be modified...often
-    -css
+    - things that are not going to be modified...often
+    - css
+
+    - Method
+        - Function inside a class
+        - it is the way in which information is passed to the server file
+            - GET
+                - info passed through the URL
+            - POST
+                - using forms
+
+- what is a FORM?
+    - a way to capture information from user
