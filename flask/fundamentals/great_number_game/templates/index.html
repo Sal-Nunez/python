@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>! ! ! The Great Number Game ! ! !</title>
+</head>
+<body class="container d-flex flex-column justify-content-center bg-dark dark" style="color:whitesmoke;min-width: 936px;">
+    <div class="mt-5">
+        <h1 class="mt-5 mb-5 text-center">Welcome to the Great Number Game!!!</h1>
+        <h3 class="mt-5 mb-5 text-center">I am thinking of a number between 1 and 100, can you guess what number i'm thinking of?</h3>
+        <div class="d-flex justify-content-center align-middle">
+            <div class="text-center" style="background-color: red;width: 75%;font-size: 4rem;">{{ current_display }}</div>
+        </div>
+    </div>
+    <form action="/check" method="POST">
+        <div class="mb-3 dark bg-dark">
+            <label for="guessthenumber" class="form-label"></label>
+            <input name="guess" type="number" class="form-control" id="guessthenumber" aria-describedby="guessthenumber">
+        </div>
+        <button type="submit" class="btn btn-primary ms-auto me-auto">Guess!</button>
+    </form>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
