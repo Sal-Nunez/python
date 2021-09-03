@@ -7,9 +7,9 @@ app.secret_key = 'wubalubadubdub'
 def index():
     if 'current_display' in session:
         pass
-    elif session['current_display'] == '!CONGRATULATIONS YOU WIN!':
-        session['current_display'] = '|| TAKE A GUESS ||'
     else:
+        session['current_display'] = '|| TAKE A GUESS ||'
+    if session['current_display'] == '!CONGRATULATIONS YOU WIN!':
         session['current_display'] = '|| TAKE A GUESS ||'
     if 'winning_number' in session:
         pass
@@ -39,7 +39,12 @@ def check():
         del session['winning_number']
     return redirect('/')
 
-
+@app.route('/reset')
+def reset():
+    del session['current_display']
+    del session['winning_number']
+    del session['tries']
+    return redirect('/')
 
 
 
