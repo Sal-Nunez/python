@@ -76,7 +76,7 @@ def add():
         session['counter'] = 1
     else:
         session['counter'] += 1
-    return gold_amount
+    return None
 
 
 if __name__=="__main__":
